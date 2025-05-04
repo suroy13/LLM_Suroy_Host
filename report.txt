@@ -1,0 +1,76 @@
+Starting diagnostics at 2025-05-04 15:31:05
+
+===== System Information =====
+Operating System: Windows
+Windows Release: 10
+Windows Version: 10.0.22621
+Architecture: ('64bit', 'WindowsPE')
+Machine: AMD64
+Processor: Intel64 Family 6 Model 142 Stepping 12, GenuineIntel
+Total RAM: 7.79 GB
+Available RAM: 1.08 GB
+WARNING: Low available RAM: 1.08 GB
+Free Disk Space: 35.37 GB
+
+===== File System Information =====
+Current Directory: c:\Development\LLM_SUROY
+Write permission: OK
+
+Files in Current Directory:
+ - .env
+ - SystemCheck
+ - myvenv
+ - report.txt
+ - requirements.txt
+
+===== Git Repository Information =====
+WARNING: Not a git repository
+
+===== Environment File Check =====
+WARNING: Git root directory not found. Cannot perform .env file check.
+
+===== Anaconda Environment Check =====
+No active Anaconda environment detected
+
+===== Virtualenv Check =====
+No active virtualenv detected
+WARNING: Neither virtualenv nor Anaconda environment is active
+
+===== Network Connectivity Check =====
+SSL Version: OpenSSL 1.1.1c  28 May 2019
+ERROR: Required packages are not installed. Please install them using 'pip install requests speedtest-cli'
+
+===== Environment Variables Check =====
+
+PYTHONPATH is not set.
+
+Python sys.path:
+ - c:\Development\LLM_SUROY\SystemCheck
+ - C:\Users\subha\anaconda3\python38.zip
+ - C:\Users\subha\anaconda3\DLLs
+ - C:\Users\subha\anaconda3\lib
+ - C:\Users\subha\anaconda3
+ - C:\Users\subha\anaconda3\lib\site-packages
+ - C:\Users\subha\anaconda3\lib\site-packages\win32
+ - C:\Users\subha\anaconda3\lib\site-packages\win32\lib
+ - C:\Users\subha\anaconda3\lib\site-packages\Pythonwin
+ERROR: Environment variables check failed: No module named 'dotenv'
+
+===== Additional Diagnostics =====
+Temp directory is writable: C:\Users\subha\AppData\Local\Temp
+
+===== Warnings Found =====
+The following warnings were detected. They might not prevent the program from running but could cause unexpected behavior:
+- Low available RAM: 1.08 GB
+- Not a git repository
+- Git root directory not found. Cannot perform .env file check.
+- Neither virtualenv nor Anaconda environment is active
+
+===== Errors Found =====
+The following critical issues were detected. Please address them before proceeding:
+- Required packages are not installed. Please install them using 'pip install requests speedtest-cli'
+- Environment variables check failed: No module named 'dotenv'
+
+
+Completed diagnostics at 2025-05-04 15:31:05
+
