@@ -1,4 +1,4 @@
-# imports details
+# imports details for Open Ai
 
 import os
 import requests
