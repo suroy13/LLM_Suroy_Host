@@ -30,9 +30,8 @@ response = openai.chat.completions.create(model="gpt-4o-mini", messages=[{"role"
 print(response.choices[0].message.content)
 
 # A class to represent a Webpage
-# If you're not familiar with Classes, check out the "Intermediate Python" notebook
 
-# Some websites need you to use proper headers when fetching them:
+# Some websites needs to use proper headers when fetching them:
 headers = {
  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36"
 }
@@ -51,5 +50,24 @@ class Website:
             irrelevant.decompose()
         self.text = soup.body.get_text(separator="\n", strip=True)
 
-webst=Website("https://www.cognizant.com")
+webst=Website("https://en.wikipedia.org/wiki/India")
 print(webst.title)
+print(webst.text.encode('ascii', 'ignore').decode('ascii'))
+
+#Setting up prompts
+system_prompt = "You are an assistant that analyzes the contents of a website \
+and provides a short summary, ignoring text that might be navigation related. \
+Respond in markdown."
+
+def User_prompt_for(url):
+    """
+    Create a user prompt for the given url
+    """
+    user_prompt= f"Please summarize the contents of the website {url}."
+    user_prompt +="\n Also provide me with your thoughts on the website, "
+    user_prompt +="and if you think it is a good website or not."
+    return user_prompt
+URL="www.cognizant.com"
+print(User_prompt_for(URL))
+
+    
