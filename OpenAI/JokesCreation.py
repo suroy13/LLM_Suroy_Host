@@ -1,6 +1,6 @@
 
 """
-@Author: Subhankar Roy
+@Author: Subhankar Roy, CTS
 A very Simple Use Case to generate Jokes by Utilizing the GPT 4o Mini Model.
 Complexity Level: Simple
 """
