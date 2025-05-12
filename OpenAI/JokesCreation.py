@@ -1,3 +1,9 @@
+
+"""
+@Author: Subhankar Roy
+A very Simple Use Case to generate Jokes by Utilizing the GPT 4o Mini Model.
+Complexity Level: Simple
+"""
 import os
 import requests
 from dotenv import load_dotenv
