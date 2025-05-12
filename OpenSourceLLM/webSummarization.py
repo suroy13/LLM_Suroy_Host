@@ -50,4 +50,4 @@ def summarize(url):
     response = ollama.chat(model=MODEL, messages=messages)
     return response['message']['content']
 
-print(summarize("https://edwarddonner.com"))
+print(summarize("https://www.geeksforgeeks.org/difference-between-static-and-dynamic-web-pages/"))
