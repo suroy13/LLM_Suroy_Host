@@ -24,9 +24,7 @@ system_prompt = "You are a helpful assistant"
 
 # Function to get the response from OpenAI with historical context
 def chat(message, history):
-    messages = [{"role": "system", "content": system_prompt}] 
-    + history 
-    + [{"role": "user", "content": message}]
+    messages = [{"role": "system", "content": system_prompt}] + history + [{"role": "user", "content": message}]
 
 # Printing the history and messages for debugging
     print("History is:")
@@ -36,7 +34,7 @@ def chat(message, history):
 
 # Streaming the response from OpenAI
 
-    stream = openai.chat.completions.create(model=MODEL, messages=messages, temperature=0.7, stream=True)
+    stream = openai.chat.completions.create(model=MODEL, messages=messages, temperature=0.3, stream=True)
 
     response = ""
     for chunk in stream:
@@ -45,4 +43,5 @@ def chat(message, history):
 
 
 # Initiating the UI compoments 
-gr.ChatInterface(fn=chat,title="Subhankar GPT Assistance!", type="messages").launch()
+# custom_theme = gr.Theme(primary_color="black", background_fill="black")
+gr.ChatInterface(fn=chat,title="Subhankar GPT Assistance Chat BOT!", type="messages").launch()
